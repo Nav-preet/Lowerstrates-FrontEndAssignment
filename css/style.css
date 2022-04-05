@@ -258,6 +258,9 @@ hr {
     .top-right {
         width: 13%;
     }
+    .button{
+        padding: 9px;
+    }
     body{
         font-size: 14px;
     }
