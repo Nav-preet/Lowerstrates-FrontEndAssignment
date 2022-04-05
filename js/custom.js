@@ -38,8 +38,8 @@ function newSidebar(){
     const att = ["href", "class"];
     const att_val =["javascript:void(0);","button new-data"];
     const innerVal = ["Loans","Finance","Debt"];
-    //a.setAttribute("href" , "javascript:void(0);");
-    for(let i=0;i<=1;i++){
+    ///a.setAttribute("href" , "javascript:void(0);");
+    for(let i=0;i<=1;i++) {
     a.setAttribute(att[i], att_val[i]);
     }
 
