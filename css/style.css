@@ -233,6 +233,7 @@ hr {
     .grid-card {
         width: 50%;
         text-align:center;
+        padding: 0 13px;
     }
     .grid-card img{
         max-width: 40%;
