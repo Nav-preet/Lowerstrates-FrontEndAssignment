@@ -252,6 +252,12 @@ hr {
     .large, h3, .button {
         font-size: 21px;
     }
+    .top-center {
+        width: 76%;
+    }
+    .top-right {
+        width: 13%;
+    }
     body{
         font-size: 14px;
     }
