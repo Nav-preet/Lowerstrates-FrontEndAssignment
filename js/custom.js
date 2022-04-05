@@ -1,4 +1,6 @@
 const sidebar = document.getElementById("sidebar");
+var flag = true;
+
 /* ----------------------------------------------------------- */
 /*  FUNCTION TO OPEN SIDEBAR
 /* ----------------------------------------------------------- */
@@ -14,7 +16,18 @@ function scrollUp(){
     window.scrollTo(0,document.body.scrollTop);
 }
 
-
+/* ----------------------------------------------------------- */
+/*  FUNCTION TO CLOSE SIDEBAR AND REOVE NEW LINKS
+/* ----------------------------------------------------------- */
+function sidebarClose() {
+    document.getElementById("sidebar").style.display = "none";
+    scrollUp();
+    const newData = document.getElementsByClassName("new-data");
+    while(newData.length > 0){
+        newData[0].remove();
+    }
+    flag = true;
+}
 
 /* ----------------------------------------------------------- */
 /*  FUNCTION TO ADD NEW LINKS ON LOGIN BUTTON CLICK
@@ -24,7 +37,7 @@ function newSidebar(){
     
     const att = ["href", "class"];
     const att_val =["javascript:void(0);","button new-data"];
-    const innerVal = ["xxx","yyy","zzz"];
+    const innerVal = ["Loans","Finance","Debt"];
     //a.setAttribute("href" , "javascript:void(0);");
     for(let i=0;i<=1;i++){
     a.setAttribute(att[i], att_val[i]);
@@ -35,6 +48,7 @@ function newSidebar(){
     clone.innerHTML = innerVal[i];
     sidebar.insertBefore(clone, sidebar.children[i+1]);
     }
+    flag = false;
     return false;
 }
   
@@ -44,7 +58,8 @@ function newSidebar(){
 function scrollDown() {
     sidebarOpen();
     window.scrollTo(0,document.body.scrollHeight);
-    newSidebar();
+    if (flag) newSidebar();
+    flag = false;
     return false;
 }
   
