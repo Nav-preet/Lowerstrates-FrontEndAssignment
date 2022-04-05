@@ -57,7 +57,7 @@ function newSidebar(){
 /* ----------------------------------------------------------- */
 function scrollDown() {
     window.scrollTo(0,document.body.scrollHeight);
-    setTimeout(function(){ sidebarOpen()} , 100);
+    setTimeout(function(){ sidebarOpen()} , 1000);
     if (flag) newSidebar();
     flag = false;
     return false;
