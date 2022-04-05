@@ -13,7 +13,7 @@ function sidebarOpen() {
 /*  FUNCTION TO SCROLL ON TOP WHEN SIDEBAR CLOSE
 /* ----------------------------------------------------------- */
 function scrollUp(){
-    setTimeout(window.scrollTo(0,document.body.scrollTop),100);
+    window.scrollTo(0,document.body.scrollTop);
 }
 
 /* ----------------------------------------------------------- */
@@ -38,8 +38,8 @@ function newSidebar(){
     const att = ["href", "class"];
     const att_val =["javascript:void(0);","button new-data"];
     const innerVal = ["Loans","Finance","Debt"];
-    ///a.setAttribute("href" , "javascript:void(0);");
-    for(let i=0;i<=1;i++) {
+    //a.setAttribute("href" , "javascript:void(0);");
+    for(let i=0;i<=1;i++){
     a.setAttribute(att[i], att_val[i]);
     }
 
@@ -57,7 +57,7 @@ function newSidebar(){
 /* ----------------------------------------------------------- */
 function scrollDown() {
     sidebarOpen();
-    setTimeout(window.scrollTo(0,document.body.scrollHeight),100);
+    window.scrollTo(0,document.body.scrollHeight);
     if (flag) newSidebar();
     flag = false;
     return false;
