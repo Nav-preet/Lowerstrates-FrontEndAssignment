@@ -13,7 +13,7 @@ function sidebarOpen() {
 /*  FUNCTION TO SCROLL ON TOP WHEN SIDEBAR CLOSE
 /* ----------------------------------------------------------- */
 function scrollUp(){
-    window.scrollTo(0,document.body.scrollTop);
+    setTimeout(window.scrollTo(0,document.body.scrollTop),100);
 }
 
 /* ----------------------------------------------------------- */
@@ -57,7 +57,7 @@ function newSidebar(){
 /* ----------------------------------------------------------- */
 function scrollDown() {
     sidebarOpen();
-    window.scrollTo(0,document.body.scrollHeight);
+    setTimeout(window.scrollTo(0,document.body.scrollHeight),100);
     if (flag) newSidebar();
     flag = false;
     return false;
