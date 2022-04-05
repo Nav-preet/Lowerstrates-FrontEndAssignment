@@ -54,18 +54,20 @@ h3,h4,h6,p{
     font-size:24px;
     font-weight: 400;
 }
-.wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.container,header{
-    float: left;
-    width: 100%;
-}
 main{
     float: left;
     width: 100%;
     margin-top: 100px;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*****************HEADER CSS *******************************/
+.container,header{
+    float: left;
+    width: 100%;
 }
 .button{
     border: none;
@@ -97,12 +99,18 @@ main{
 }
 .top-left{
     float: left;
+    text-align: left;
+    width: 10%;
 }
 .top-right{
     float: right;
+    width: 10%;
+    text-align: right;
 }
 .top-center{
     text-align: center;
+    width: 80%;
+    display: inline-block;
 }
 .sidebar{
     display: none;
@@ -115,6 +123,8 @@ main{
     box-shadow: 0 0 10px #eee;
     height: 100%;
 }
+
+/*****************MAIN CONTENT CSS *******************************/
 .grid-card {
     float: left;
     width: 25%;
@@ -159,6 +169,8 @@ hr {
     margin: 0 auto;
     max-width: 70%;
 }
+
+/*****************FOOTER CSS *******************************/
 .footer-center, .footer-left, .footer-right{
     float: left;
     width: 33%;
